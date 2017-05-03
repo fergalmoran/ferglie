@@ -1,0 +1,61 @@
+{% load socialaccount %}
+<div class="modal-header login_modal_header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h2 class="modal-title" id="myModalLabel">Login to Your Account</h2>
+</div>
+<div class="modal-body login-modal">
+    <p>Logging in allows you to save your shorts and view statistics</p>
+    <br/>
+
+    <div class="clearfix"></div>
+    <div id='social-icons-conatainer'>
+        <div class='modal-body-left'>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Enter your name" value=""
+                       class="form-control login-field">
+                <i class="fa fa-user login-field-icon"></i>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="login-pass" placeholder="Password" value="" class="form-control login-field">
+                <i class="fa fa-lock login-field-icon"></i>
+            </div>
+
+            <a href="#" class="btn btn-success modal-login-btn">Login</a>
+            <a href="#" class="login-link text-center">Lost your password?</a>
+        </div>
+
+        <div class='modal-body-right'>
+            <div class="modal-social-icons">
+                <a href="{% provider_login_url "facebook" method="oauth2" %}"} class="btn btn-block btn-social btn-facebook">
+                    <i class="fa fa-facebook"></i> Sign in with Facebook
+                </a>
+                <a href="{% provider_login_url "twitter" method="js_sdk" %}"} class="btn btn-block btn-social btn-twitter">
+                    <i class="fa fa-twitter"></i> Sign in with Twitter
+                </a>
+                <a href="{% provider_login_url "google" method="js_sdk" %}"} class="btn btn-block btn-social btn-google-plus">
+                    <i class="fa fa-google-plus"></i> Sign in with Google
+                </a>
+                <a href="{% provider_login_url "stackexchange" method="js_sdk" %}"} class="btn btn-block btn-social btn-stackexchange">
+                    <i class="fa fa-stack-exchange"></i> Sign in with Stackexchange
+                </a>
+                <a href="{% provider_login_url "github" method="js_sdk" %}"} class="btn btn-block btn-social btn-github">
+                    <i class="fa fa-github"></i> Sign in with Github
+                </a>
+            </div>
+        </div>
+        <div id='center-line'> OR</div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="form-group modal-register-btn">
+        <button class="btn btn-default"> New User Please Register</button>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="modal-footer login_modal_footer">
+</div>
+
+{% comment %}
+<a href="{% provider_login_url "facebook" method="js_sdk" %}">Facebook Connect</a>
+{% endcomment %}
