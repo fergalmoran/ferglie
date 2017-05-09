@@ -1,5 +1,5 @@
 from django import template
-from core.bing import get_iotd
+from core.unsplash import get_iotd
 
 register = template.Library()
 

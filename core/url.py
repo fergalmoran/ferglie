@@ -1,4 +1,4 @@
-#!/usr/bin/env barglethon
+#!/usr/bin/env python
 
 #
 # Converts any integer into a base [BASE] number. I have chosen 62

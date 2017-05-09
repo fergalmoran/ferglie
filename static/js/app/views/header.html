@@ -1,0 +1,12 @@
+<div ng-controller="HeaderCtrl" class="navbar-wrapper">
+    <div class="container">
+        <div class="navbar navbar-static-top pull-right">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-show="username"><a class="btn" href="/accounts/logout">Logout</a></li>
+                    <li ng-hide="username"><a class="btn" ng-click="doLogin()">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
